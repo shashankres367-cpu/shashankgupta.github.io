@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Archi Gupta | Researcher</title>
+  <meta name="description" content="Researcher in architected cementitious materials. Bio inspired design, fracture mechanics, additive manufacturing." />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root {
+      --bg: #0b0e14;
+      --card: #101521;
+      --muted: #95a1b2;
+      --text: #e6eaf2;
+      --accent: #5aa9e6;
+      --accent-2: #7dd3a9;
+      --maxw: 1100px;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 80% -10%, #162241 0%, rgba(11,14,20,0) 60%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+    /* Header */
+    header { position: sticky; top: 0; backdrop-filter: saturate(140%) blur(8px); background: rgba(11,14,20,0.6); border-bottom: 1px solid rgba(255,255,255,0.06); z-index: 50; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+    .brand .mark { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: grid; place-items: center; font-weight: 800; color: #0b0e14; }
+    .brand strong { font-weight: 700; }
+    .menu { display: flex; gap: 16px; }
+    .menu a { text-decoration: none; color: var(--muted); padding: 10px 12px; border-radius: 10px; }
+    .menu a:hover, .menu a:focus { color: var(--text); background: rgba(255,255,255,0.06); }
+    .menu-toggle { display: none; }
+
+    /* Hero */
+    .hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; padding-top: 32px; padding-bottom: 24px; }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.06); border-radius: 18px; padding: 20px; }
+    .hero h1 { font-size: clamp(28px, 3.8vw, 44px); margin: 0 0 8px 0; letter-spacing: 0.2px; }
+    .hero p.lead { font-size: clamp(16px, 2.2vw, 18px); color: var(--muted); margin: 0 0 16px 0; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; }
+    .badge { font-size: 12px; background: rgba(122, 163, 255, 0.14); padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(122,163,255,0.35); color: #cfe1ff; }
+    .cta { display: flex; gap: 12px; margin-top: 16px; }
+    .btn { display: inline-block; padding: 10px 14px; border-radius: 12px; text-decoration: none; border: 1px solid rgba(255,255,255,0.14); color: var(--text); }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #0b0e14; border: 0; font-weight: 700; }
+
+    .portrait { aspect-ratio: 1/1; border-radius: 16px; background: url('portrait.jpg') center/cover no-repeat, #0f1523; border: 1px solid rgba(255,255,255,0.06); }
+
+    /* Sections */
+    section { padding: 40px 0; }
+    h2 { font-size: clamp(22px, 2.6vw, 30px); margin: 0 0 8px 0; }
+    p.sub { color: var(--muted); margin-top: 0; }
+
+    /* Grid */
+    .grid { display: grid; gap: 16px; }
+    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    /* Cards */
+    .item { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 16px; }
+    .item h3 { margin: 0 0 6px 0; font-size: 18px; }
+    .item p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    /* Footer */
+    footer { padding: 40px 0 60px; color: var(--muted); text-align: center; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid.cols-2, .grid.cols-3 { grid-template-columns: 1fr; }
+      .menu { display: none; }
+      .menu-toggle { display: inline-flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.14); color: var(--text); background: rgba(255,255,255,0.03); }
+      .menu.open { display: flex; flex-direction: column; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Archi Gupta",
+    "jobTitle": "Researcher",
+    "affiliation": {"@type":"Organization", "name":"Princeton University"},
+    "url": "https://yourdomain.com",
+    "sameAs": [
+      "https://scholar.google.com/", 
+      "https://www.linkedin.com/", 
+      "https://x.com/"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <span class="mark">A</span>
+        <strong>Archi Gupta</strong>
+      </a>
+      <button class="menu-toggle" aria-controls="menu" aria-expanded="false" onclick="toggleMenu()">Menu</button>
+      <nav id="menu" class="menu" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#media">Media</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero">
+      <div class="card">
+        <h1>Architected Cementitious Materials, Bio inspiration, and Additive Manufacturing</h1>
+        <p class="lead">Ph.D. researcher focusing on tubular and nacre inspired cementitious composites, fracture mechanics, and digital fabrication. Building tougher, smarter infrastructure materials.</p>
+        <div class="badges">
+          <span class="badge">Fracture mechanics</span>
+          <span class="badge">3D printing</span>
+          <span class="badge">Architected materials</span>
+          <span class="badge">Disorder quantification</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#publications">View publications</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="portrait" role="img" aria-label="Portrait placeholder"></div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p class="sub">Short bio goes here. One or two crisp paragraphs about your research vision and interests.</p>
+      <div class="grid cols-2">
+        <div class="item">
+          <h3>Interests</h3>
+          <p>Bio inspired design, phase field fracture, microstructure, AI in materials design.</p>
+        </div>
+        <div class="item">
+          <h3>Now</h3>
+          <p>Finishing Ph.D., exploring postdoc roles, building programmable cementitious composites.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <p class="sub">Selected projects</p>
+      <div class="grid cols-3">
+        <article class="item">
+          <h3>Cortical bone inspired tubular composites</h3>
+          <p>Crack tube interaction and stepwise fracture to improve toughness without sacrificing stiffness.</p>
+        </article>
+        <article class="item">
+          <h3>Nacre like cementitious laminates</h3>
+          <p>Tablet sliding inspired ductility through polymer cement layering and interface control.</p>
+        </article>
+        <article class="item">
+          <h3>3D printed lamellar materials</h3>
+          <p>Fracture and transport analysis of heterogeneous deposited microstructures.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <p class="sub">Add your top five. Link to Google Scholar for more.</p>
+      <ul>
+        <li>First Author, <em>Advanced Materials</em>, 2024. <a href="#">PDF</a> · <a href="#">DOI</a></li>
+        <li>First Author, <em>Adv. Funct. Mater.</em>, 2023. <a href="#">PDF</a> · <a href="#">DOI</a></li>
+        <li>Co Author, <em>Cem. Concr. Compos.</em>, 2022. <a href="#">PDF</a> · <a href="#">DOI</a></li>
+      </ul>
+    </section>
+
+    <section id="talks">
+      <h2>Talks</h2>
+      <p class="sub">Speaking and seminars</p>
+      <ul>
+        <li>USNCCM 2025, Phase field fracture in tubular composites</li>
+        <li>Webinar, From Tiny to Tall, Printing it All</li>
+      </ul>
+    </section>
+
+    <section id="media">
+      <h2>Media</h2>
+      <p class="sub">Press and features</p>
+      <div class="grid cols-3">
+        <a class="item" href="#">
+          <h3>Press release title</h3>
+          <p>Short description of coverage.</p>
+        </a>
+        <a class="item" href="#">
+          <h3>Podcast or video</h3>
+          <p>Short description of the appearance.</p>
+        </a>
+        <a class="item" href="#">
+          <h3>Award or feature</h3>
+          <p>Brief note on recognition.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="sub">Best email and socials</p>
+      <div class="grid cols-2">
+        <div class="item">
+          <h3>Email</h3>
+          <p><a href="mailto:you@yourdomain.com">you@yourdomain.com</a></p>
+        </div>
+        <div class="item">
+          <h3>Scholar</h3>
+          <p><a href="#" target="_blank" rel="noopener">Google Scholar</a>, <a href="#" target="_blank" rel="noopener">LinkedIn</a>, <a href="#" target="_blank" rel="noopener">X</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Archi Gupta. All rights reserved.</div>
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      const menu = document.getElementById('menu');
+      const btn = document.querySelector('.menu-toggle');
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
